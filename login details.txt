@@ -1,0 +1,40 @@
+mysql command line client
+root
+password
+
+Then sql database server will  start---check login screenshot
+If login doesnt open screenshot page it means you need to reconfigure mySql server in mysql installer
+
+========== manually start or stop sql server on pc ===============
+1.search services on search bar
+2.then look for mysql80
+3.click on it
+4.u can see options
+===================after shutdown =================
+1.after shutdown and restart mysql server was still on and running
+=====================to connect mysql from python we need to install connector package=============
+pip install mysql-connector-python
+
+======================to see databases =================
+1.open mysqlcommand line client  or open cmd mysql -u root -p press Enter
+2.type password password
+3.show databases;
+4.DROP DATABASE Flowers;  #####to delete that DB
+5.Use database;       #####to use a particular DB
+6.Select database;  ####to select DB
+7.exit  ##to LOGOUT	of sql server not to stop sql server
+======================== to shutdown mysql server=================
+1.open cmd then cd.. cd..
+2.cd Program Files\MySQL
+mysqladmin -u root -p shutdown
+4.password
+======================to add mysql to cmd u need to add wnvironment variables=====================
+1.PATH=C:\Program Files\MySQL\MySQL Server 8.0\bin
+2.open system in control panel
+3.then advanced settings then envi variables
+4.then variable name is PATH
+5.C:\Program Files\MySQL\MySQL Server 8.0\bin
+6.restart cmd then you can use mysql
+
+==========================to connect mysql to python ===========
+https://www.geeksforgeeks.org/connect-mysql-database-using-mysql-connector-python/?ref=rp
