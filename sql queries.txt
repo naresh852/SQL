@@ -1,0 +1,53 @@
+-- DROP TABLE student;
+-- GRANT ALL PRIVILEGES ON DATABASE giraffe TO root;
+CREATE TABLE student(
+    student_id INT AUTO_INCREMENT,
+    name VARCHAR(20) NOT NULL,
+    major VARCHAR(20) DEFAULT 'undecided',
+     PRIMARY KEY(student_id)
+);
+SELECT * FROM student;
+SELECT * 
+FROM employee;
+-- ORDER BY student_id ASC;
+-- ORDER BY major,student_id DESC;
+-- LIMIT 2;
+-- ORDER BY student_id DESC;
+-- WHERE major ='english';
+-- WHERE major='english' OR major='physics';
+--  WHERE major='english' AND name='tony';
+-- WHERE major<>'chemistry';
+-- WHERE student_id<=3;
+-- WHERE student_id<=3 AND name<>'tony';
+-- WHERE name IN ('tony','gola','alex');
+-- WHERE major IN ('biology','english');
+WHERE major IN ('biology','english') AND student_id >2;
+
+UPDATE student
+SET name='tony',major='chemistry',student_id=5;
+WHERE name='gola';
+-- UPDATE student
+-- SET major='undecided';
+
+DELETE FROM student;
+-- WHERE name='tom' AND major='undecided';
+-- WHERE student_id=5;
+-- SET name='tom',major='astrology'
+-- WHERE student_id=1;
+-- SET major='chem'
+-- WHERE major='bio' OR major='physics';
+-- WHERE major='chemistry';
+-- WHERE student_id =4;
+/* DESCRIBE student;
+-- DROP TABLE student;
+-- ALTER TABLE student ADD gpa DECIMAL(3,2);
+-- ALTER TABLE student DROP COLUMN gpa;*/
+-- INSERT INTO student(student_id, name) VALUES(4,'rakesh');
+INSERT INTO student(name,major,student_id) VALUES('tony','english',5);
+INSERT INTO student(name,major) VALUES('alex','chemistry');
+-- INSERT INTO student VALUES(2,'allu','brandy');
+-- INSERT INTO student VALUES(3,NULL,"chemistry");
+-- INSERT INTO student VALUES(4,'shano','biology');
+
+SELECT * FROM sample_table;
+SELECT * FROM new_table;
