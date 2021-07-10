@@ -1,0 +1,23 @@
+tGreenplumInput_2 ERROR: operator does not exist: character varying = numeric
+
+
+tGreenplumInput_1 ERROR: operator does not exist: integer = character varying
+
+
+tDBInput_1 ERROR: operator does not exist: timestamp without time zone >= double precision
+
+
+tGreenplumInput_2 ERROR: operator does not exist: text = numeric
+
+Opening Tac
+
+Job conductor
+Add a job
+Run the job
+
+Checking the logs
+What's a trigger and how to add
+What's an Execution plan
+Checking Command line
+Context Parameters
+https://web.microsoftstream.com/video/38736dbd-0864-47ad-a50d-27cf34eb0525

@@ -1,0 +1,47 @@
+-- set @n:=-1;
+-- select round(avg(lat_n),4)
+-- from (select @n:=@n+1 as roww,lat_n from station order by lat_n) as l
+-- where l.roww in (floor(@n/2),ceil(@n/2))
+
+set @n:=0;
+select count(*) from station into @total;
+select round(avg(A.lat_n),4)
+from (select @n:=@n+1 as rowindex,lat_n from station order by lat_n) as A
+where case
+     when mod(@total,2)=0
+     then A.rowindex in ( @total/2,(@total/2)+1 )
+     else A.rowindex in ((@total+1)/2)
+     end
+;
+               
+-- SET @N := 0;
+-- SELECT COUNT(*) FROM STATION INTO @TOTAL;
+-- SELECT
+--     ROUND(AVG(A.LAT_N), 4)
+-- FROM (SELECT @N := @N +1 AS ROW_ID, LAT_N FROM STATION ORDER BY LAT_N) A
+-- WHERE
+--     CASE WHEN MOD(@TOTAL, 2) = 0 
+--             THEN A.ROW_ID IN (@TOTAL/2, (@TOTAL/2+1))
+--             ELSE A.ROW_ID = (@TOTAL+1)/2
+--     END
+-- ;            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+-- set @rowindex := -1; /* 1) creates an index*/ 
+-- /* 3) the outer query will select the average of the 2(for odd no. of values)/1(for even) values we found in the middle of the sorted array */
+-- select round(avg(lat_n),4)
+-- from
+-- /* 2) the index will increment for each new value of lat_n it finds, and sort them by lat_n
+-- */
+-- (select @rowindex:=@rowindex+1 as rowindex, lat_n 
+-- from station
+-- order by lat_n) as l 
+-- where l.rowindex in (floor(@rowindex/2), ceil(@rowindex/2));

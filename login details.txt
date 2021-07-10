@@ -38,3 +38,8 @@ mysqladmin -u root -p shutdown
 
 ==========================to connect mysql to python ===========
 https://www.geeksforgeeks.org/connect-mysql-database-using-mysql-connector-python/?ref=rp
+
+
+
+=====================mysql version check ============================
+mysql> select version();

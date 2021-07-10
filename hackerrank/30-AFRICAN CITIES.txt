@@ -1,0 +1,4 @@
+select c.name from country co
+inner join 
+city c on co.code=c.countrycode
+where co.continent='africa'
